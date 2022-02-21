@@ -1,25 +1,14 @@
 <template>
-  <h1 :class="['static', { 'text-danger': hasError }]">Cataline</h1>
+  <ButtonStyled />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import ButtonStyled from '@/components/ButtonStyled.vue'
 
 export default defineComponent({
-  data() {
-    return {
-      isActive: true,
-      hasError: false
-    }
+  components: {
+    ButtonStyled
   }
 })
 </script>
-
-<style scoped>
-.test {
-  color: red;
-}
-.active {
-  color: green;
-}
-</style>
